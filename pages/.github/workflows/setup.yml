@@ -1,0 +1,11 @@
+name: Setup Files
+on: [push]
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Create missing files
+        run: |
+          mkdir -p pages/api components lib styles
+          # Files will be created automatically
